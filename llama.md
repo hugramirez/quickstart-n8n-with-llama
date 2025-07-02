@@ -164,5 +164,34 @@ La ingeniería de prompt es la práctica de diseñar y refinar las instrucciones
 | **Retrieval-augmented prompting** | Consultas de información actualizada o especializada     | Menor tasa de errores factuales<br>Contexto rico               | Complejidad en integración de fuentes externas                |
 
 
+En la interacción con un LLM, cada mensaje cumple un rol específico dentro del flujo de conversación. Al distinguir entre system, user, assistant y function, podemos estructurar claramente las instrucciones, las peticiones y las respuestas, así como incorporar información externa de forma ordenada. Esta clasificación garantiza que el modelo entienda tanto el contexto general (system) como las solicitudes concretas (user), produzca respuestas coherentes (assistant) y, cuando sea necesario, ejecute o reciba datos de servicios adicionales (function).
 
+#### Tipos de mensaje
+
+- System: define comportamientos generales (“Eres un asistente útil…”).
+
+- User: contiene la petición o consulta concreta del usuario final.
+
+- Assistant: mensajes generados por el modelo como respuesta.
+
+- Function: invocaciones o retornos de funciones externas (dialogs API), usadas para enriquecer el flujo de información.
+
+
+#### Consulta también:
+
+- [promptingguide](https://www.promptingguide.ai/)
+- [llm-use-cases](https://cohere.com/blog/llm-use-cases) 
+
+## El valor de la inteligencia artificial de código abierto (open source)
+
+La inteligencia artificial (IA) está transformando rápidamente sectores clave como la salud, la educación, la industria y la creatividad. En este contexto, el código abierto se ha convertido en un elemento crucial para democratizar el acceso a esta tecnología y acelerar la innovación. Los modelos de lenguaje de gran tamaño (LLM) de código abierto permiten que desarrolladores, investigadores y empresas puedan experimentar, adaptar y mejorar soluciones sin depender de plataformas cerradas o propietarias.
+
+Esta apertura no solo promueve el desarrollo colaborativo, sino que también garantiza mayor transparencia, auditabilidad y adaptabilidad. Al permitir que comunidades técnicas de todo el mundo contribuyan con mejoras, se facilita la creación de sistemas más seguros, responsables y adecuados a contextos específicos.
+
+El artículo de n8n.io subraya cómo el enfoque open source en el desarrollo de LLM está abriendo nuevas posibilidades para crear flujos de trabajo automatizados e inteligentes sin necesidad de depender de proveedores centralizados. En lugar de construir sistemas cerrados, se fomenta un ecosistema flexible donde cada organización puede ajustar y personalizar sus herramientas de IA según sus necesidades.
+
+En resumen, el open source en IA representa una vía poderosa para construir un futuro más inclusivo, transparente y participativo en el uso de la inteligencia artificial.
+
+#### Consulta también:
+[open-source-llm](https://blog.n8n.io/open-source-llm/)
 
