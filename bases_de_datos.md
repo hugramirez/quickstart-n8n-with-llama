@@ -40,13 +40,13 @@ Son compatibles con IA porque son fáciles de buscar, de indexar, de etiquetar y
 
 Se pueden quedar en tu computadora, son de bajo peso y puedes usarlas localmente sin necesidad de la nube para conservar tu privacidad.
 
-¿Cómo se ve una línea usando Markdown?
+### ¿Cómo se ve una línea usando Markdown?
 
-Lo que escribo: 
+#### Lo que escribo: 
 
 - ```Tres tristes **tigres** tragaban _trigo_ en un **_trigal_**.```
 
-Lo que veré: 
+#### Lo que veré: 
 
 - Tres tristes **tigres** tragaban trigo en un **_trigal_**.
 
@@ -54,11 +54,11 @@ Ideas, diarios, minutas, evaluaciones de desempeño, encuestas de satisfacción,
 
 
 
-Consulta también:
+#### Consulta también:
 - [Markdown tutorial](https://www.markdowntutorial.com)
 - [Markdown live preview](https://markdownlivepreview.com/)
 
-Libro: 
+#### Libro: 
 - The Markdown Guide de Matt Cone (2023) Leanpub.
 
 ## ¿Qué son datos estructurados?
@@ -67,7 +67,7 @@ Hablar de datos en el contexto digital es hablar del registro de valores, hechos
 
 Los datos por sí solos no tienen ningún significado, al ser una descripción de lo observado no proporcionan ningún contexto ni interpretación de lo que registran y por consiguiente no detonan ninguna acción cuando se miran aisladamente. Tener muchos o pocos datos no determina que se puedan realizar más o menos acciones con ellos, es mucho más importante procurar tener los datos necesarios para los objetivos que se planteen que almacenarlos sin sentido, solo ocupan recursos y pueden complicar la identificación de lo que es relevante o importante sobre ellos.
 
-Los datos pueden ser:
+#### Los datos pueden ser:
 
 - **No estructurados:** no poseen una organización o estructura interna, tienen un formato libre, no están en una tabla (archivos de texto, imagen, videos, reportes, correos electrónicos, etc.).
 
@@ -75,7 +75,7 @@ Los datos pueden ser:
 
 Los datos estructurados facilitan tareas de búsqueda, recolección y filtrado porque están organizados en una forma estandarizada que habilita la lectura en diferentes sistemas.
 
-Mira este comparativo entre datos estructurados y no estructurados:
+#### Mira este comparativo entre datos estructurados y no estructurados:
 
 | Estructurados                                              | No - Estructurados                                                              |
 | :--------------------------------------------------------- | :------------------------------------------------------------------------------ |
@@ -86,7 +86,7 @@ Mira este comparativo entre datos estructurados y no estructurados:
 | Se pueden explorar usando métodos basados en lenguaje de consulta estructurada (SQL) | Pueden necesitar herramientas especializadas para su exploración              |
 | Relativamente fáciles de manejar y proteger con soluciones existentes o herramientas tradicionales | Más difíciles de manejar y proteger con soluciones existentes o herramientas tradicionales |
 
-Algunas ventajas de los datos estructurados son:
+#### Algunas ventajas de los datos estructurados son:
 
 - Funcionan bien para ser procesados usando Machine Learning, puede ser más fácil analizarlos por la forma en la que están organizados.
 
@@ -94,7 +94,7 @@ Algunas ventajas de los datos estructurados son:
 
 - Pueden ser utilizados con una amplia variedad de herramientas porque preceden a los datos no estructurados
 
-Algunas desventajas:
+#### Algunas desventajas:
 
 - Pueden parecer inflexibles o limitados en su uso porque tienen que apegarse a un modelo predefinido y que persigue un objetivo, entonces no pueden usarse para otra cosa
 
@@ -110,37 +110,39 @@ Son archivos de texto simple con extensión “.csv” donde la información est
 
 Usualmente la primera fila se utiliza como encabezado para identificar los nombres da las columnas y los datos se almacenan a partir de la segunda fila. Se utilizan cuando los datos pueden ser almacenados en tablas simples que no necesitan estructuras complejas o anidadas. Por ejemplo:
 
+```
 ID_CONTACTO, NOMBRE, DEPARTAMENTO
 
 325, “Ana”, “Instalaciones”
 
 216, “Carlos”, “Audio”
+```
 
-Algunas de sus ventajas son:
+#### Algunas de sus ventajas son:
 
-fáciles de crear
+- fáciles de crear
 
-fáciles de leer
+- fáciles de leer
 
-compatibles con diversas herramientas tipo hojas de cálculo
+- compatibles con diversas herramientas tipo hojas de cálculo
 
-requieren poco espacio de almacenamiento
+- requieren poco espacio de almacenamiento
 
-pueden convertirse a formato JSON
+- pueden convertirse a formato JSON
 
-recomendados para bases de datos pequeñas
+- recomendados para bases de datos pequeñas
 
-Algunas desventajas que presentan son:
+#### Algunas desventajas que presentan son:
 
-los datos se muestran tal cual son, cualquiera podría leerlos
+- los datos se muestran tal cual son, cualquiera podría leerlos
 
-no pueden contener objetos anidados como arreglos o listas
+- no pueden contener objetos anidados como arreglos o listas
 
-pueden tener problemas con algunos caracteres especiales que contengan comas, como el formato europeo del punto decimal, o con fechas
+- pueden tener problemas con algunos caracteres especiales que contengan comas, como el formato europeo del punto decimal, o con fechas
 
-no almacenan información sobre el tipo de dato que contienen o el formato, lo más que llegan a contener es el nombre de la columna
+- no almacenan información sobre el tipo de dato que contienen o el formato, lo más que llegan a contener es el nombre de la columna
 
-pueden ser difíciles de escalar o integrar con otros
+- pueden ser difíciles de escalar o integrar con otros
 
 Este tipo de archivos se utilizan para importar o exportar datos de hojas de cálculo, almacenar datos en tablas simples, registros de actividades o interacciones, datos para visualizadores de inteligencia de negocios, por mencionar algunos.
 
@@ -208,6 +210,10 @@ Este tipo de estructura permite crear bases de datos jerárquicas donde los dato
 }
 ```
 
+Aquí podemos describir la estructura para la clave dirección con 2 ramificaciones, una para casa y otra para trabajo. Esta propiedad representa una de las principales fortalezas para los archivos json porque permite tener sub-datos dentro de los datos haciéndolos muy útiles para construir relaciones entre los datos que son mucho más fáciles de acceder y gestionar a diferentes niveles y usando menos recursos.
+
+A continuación encontrarás un comparativo de las características más relevantes entre  los 2 formatos de salida de texto más comunes:
+
 | Características     | CSV                                                        | JSON                                                                                                        |
 | :------------------ | :--------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------- |
 | **Complejidad de datos** | Simples en formato tabla                                   | Complejos y en estructuras jerárquicas, anidando objetos y arreglos                                        |
@@ -218,7 +224,43 @@ Este tipo de estructura permite crear bases de datos jerárquicas donde los dato
 | **Escalabilidad** | Ideal para tabulares grandes, limitada para estructuras complejas | Escalable para datos complejos, su eficiencia disminuye con bases de datos muy grandes                      |
 
 
+#### Consulta también:
 
-Aquí podemos describir la estructura para la clave dirección con 2 ramificaciones, una para casa y otra para trabajo. Esta propiedad representa una de las principales fortalezas para los archivos json porque permite tener sub-datos dentro de los datos haciéndolos muy útiles para construir relaciones entre los datos que son mucho más fáciles de acceder y gestionar a diferentes niveles y usando menos recursos.
+- [Json es](https://www.json.org/json-es.html)
+- [Json vs csv](https://jsoneditoronline.org/indepth/compare/json-vs-csv/)
 
-A continuación encontrarás un comparativo de las características más relevantes entre  los 2 formatos de salida de texto más comunes:
+## ¿Qué es una base de datos?
+
+Una base de datos es una herramienta que organiza conjuntos de datos de cualquier tipo, estructurados y no estructurados. Es un vehículo para almacenar, consultar y gestionar los datos electrónicamente; el diseño adecuado de estas bases permite acceder a volúmenes grandes de datos optimizando recursos.
+
+“ Una base de datos se puede definir como una colección de elementos relacionados dentro de un proceso de negocio o el entorno de un problema específico.”
+
+Principles of Database Management. The Practical Guide to Storing, Managing and Analyzing Big and Small Data.  Wilfried Lemahieu et. al. 2018. Cambridge University Press. p. 5.
+
+Una base de datos puede contener información en forma de números, texto, imágenes, multimedia, etc. Su estructura puede ser desde una lista en un archivo simple de texto, una tabla con renglones y columnas, hasta convertirse en algo complejo como un arreglo de objetos o múltiples tablas.
+
+Para acceder a las bases de datos, normalmente se utiliza un sistema de gestión o DBMS (Database Management System), algunos de ellos son MySQL, PostgreSQL, Azure o MongoDB.
+
+## Bases de datos relacionales
+
+Este diseño de bases de datos utiliza tablas con filas y columnas para organizar la información, esta estructura suele ser muy común en hojas de cálculo. Se llama relacional porque pueden existir relaciones entre las diferentes tablas a través de los campos que tienen en común y guiados por una clave o llave única que los identifica. En estas bases se usa el lenguaje SQL (Structured Query Language) para su gestión y consulta.
+
+## Bases de datos no relacionales o NoSQL
+
+En este diseño no hay tablas como las que identifican a las bases relacionales y tampoco se usa el lenguaje SQL para gestionarlas. Se usan principalmente para datos no estructurados y contienen colecciones de documentos, imágenes, objetos o multimedia.
+
+El rol de las bases de datos es fundamental para el desarrollo de agentes de IA porque permiten almacenar datos para entrenar modelos, gestionar las interacciones de los agentes o extraer información al instante.
+
+#### A continuación un breve comparativo para bases relacionales y no relacionales:
+
+| Característica        | Bases de Datos Relacionales                                         | Bases de Datos No Relacionales                                       |
+| :-------------------- | :------------------------------------------------------------------ | :------------------------------------------------------------------- |
+| **Estructura de Datos** | Organizadas en tablas con filas y columnas.                         | Flexibles, contienen documentos, imágenes, multimedia, etc.          |
+| **Esquema** | Rígido: para hacer cambios hay que modificar la estructura de la tabla. | Dinámico: no hay estructura predefinida.                             |
+| **Lenguaje de Consulta** | Usa SQL (Lenguaje de Consulta Estructurado) para consultas.         | No usa SQL, se apoya de APIs y otros lenguajes.                      |
+| **Escalabilidad** | Vertical: más potencia a un solo servidor.                          | Horizontal: más servidores, más particiones.                         |
+| **Rendimiento** | Óptimo para datos estructurados.                                   | Alto para datos no estructurados.                                    |
+| **DBMS** | MySQL, PostgreSQL, Azure, SQL Server.                               | MongoDB, Cassandra, DynamoDB, Neo4j.                                 |
+| **Complejidad** | Más complejas de diseñar y mantener debido al esquema rígido.       | Más simples para desarrollo rápido, pero pueden complicar consultas complejas. |
+
+
