@@ -16,7 +16,7 @@ Los archivos TXT se pueden utilizar tanto para almacenar información como para 
 
 Un lenguaje de marcado o markup, es un sistema de anotaciones como las que se utilizan en las revisiones editoriales, los editores revisaban los manuscritos y ponían notas en el margen con comentarios o correcciones previas a la publicación. Para el mundo digital es muy similar, estas anotaciones utilizan etiquetas, códigos y/o símbolos para indicar cierta estructura de formato o de visualización en pantalla.
 
-En el caso de MARKDOWN se pueden tomar documentos de diferentes formatos como Word, PDF, Página WEB y convertirlos a texto Markdown usando símbolos para definir una estructura jerárquica. Por ejemplo:
+#### En el caso de MARKDOWN se pueden tomar documentos de diferentes formatos como Word, PDF, Página WEB y convertirlos a texto Markdown usando símbolos para definir una estructura jerárquica. Por ejemplo:
 
 -  ```# para nivel 1 (Título)```
 
@@ -262,5 +262,18 @@ El rol de las bases de datos es fundamental para el desarrollo de agentes de IA 
 | **Rendimiento** | Óptimo para datos estructurados.                                   | Alto para datos no estructurados.                                    |
 | **DBMS** | MySQL, PostgreSQL, Azure, SQL Server.                               | MongoDB, Cassandra, DynamoDB, Neo4j.                                 |
 | **Complejidad** | Más complejas de diseñar y mantener debido al esquema rígido.       | Más simples para desarrollo rápido, pero pueden complicar consultas complejas. |
+
+
+El diseño de una base de datos responde a objetivos específicos sobre el entorno o el problema que buscan resolver y la eficiencia en el diseño optimiza recursos de almacenamiento, rendimiento y sobre todo escalabilidad. El uso de algunas técnicas como la indexación o la normalización puede contribuir a mejorar el tiempo de consulta, la experiencia del usuario  y procesamiento.
+
+
+
+#### Consulta también:
+
+Libro: 
+- Database Systems: Design, Implementation and Management 13e. Coronel, Carlos y Morris, Steven. 2019 CENGAGE.
+  
+- [Conceptos](https://support.microsoft.com/es-es/topic/conceptos-b%C3%A1sicos-del-dise%C3%B1o-de-una-base-de-datos-eb2159cf-1e30-401a-8084-bd4f9c9ca1f5)
+- [PequeÑa_introducción_a_las_bases_de_datos](https://www.researchgate.net/publication/369039369_Pequena_introduccion_a_las_bases_de_datos)
 
 
