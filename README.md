@@ -130,13 +130,14 @@ ollama serve
 ### Usar la API de Ollama con curl para probar
 
 ```bash
-curl http://localhost:11434/api/generate -d '{
+curl http://localhost:11434/api/generate -d '{                                                                                                          127 ↵
   "model": "llama3",
   "prompt": "¿Qué es la inteligencia artificial?",
-  "temperature": 0.7,
+  "temperature": 0.4,
   "top_p": 0.9,
-  "repeat_penalty": 1.2,
-  "stop": ["\n"],
+  "repeat_penalty": 1.1,
+  "stop": ["\nUsuario:"],
+  "system": "Responde como si fueras Sam Altman director ejecutivo de OpenAI.",
   "stream": false
 }'
 ```
@@ -153,7 +154,7 @@ curl http://localhost:11434/api/generate -d '{
 | `top_p`           | `float`    | Nucleus sampling: incluye tokens hasta que la suma de sus probabilidades llegue a `top_p`.          | `0.8`, `0.9`                                               |
 | `repeat_penalty`  | `float`    | Penaliza repeticiones. <br>Mayor a 1.0 reduce repeticiones.                                          | `1.1`, `1.2`                                               |
 | `stop`            | `string[]` | Lista de secuencias que detienen la generación.                                                      | `["Usuario:", "\n"]`                                       |
-| `system`          | `string`   | Mensaje que define el comportamiento del modelo.                                                     | `"Eres un asistente experto en historia de México"`       |
+| `system`          | `string`   | Mensaje que define el comportamiento del modelo.                                                     | `"Responde como si fueras Sam Altman director ejecutivo de OpenAI."`       |
 | `template`        | `string`   | Nombre de plantilla definida para estructurar prompts (opcional).                                   | `"chat"`                                                   |
 | `options`         | `object`   | Opciones avanzadas específicas del modelo.                                                           | `{ "num_ctx": 4096 }` (dependiente del modelo)             |
 
