@@ -71,7 +71,73 @@ docker compose version
 
 ### Instalar ollama
 
+[Search model](https://ollama.com/search)
+
 ```bash
 $ brew install ollama
+```
+
+```bash
+brew services start ollama
+```
+
+```bash
+ollama --help
+```
+
+### Ollama CLI
+
+| Comando                  | Descripción                                                                 |
+|--------------------------|-----------------------------------------------------------------------------|
+| `ollama serve`           | Inicia el servidor de Ollama en `localhost:11434`                           |
+| `ollama run <modelo>`    | Ejecuta un modelo en modo interactivo (chat)                                |
+| `ollama pull <modelo>`   | Descarga un modelo desde el repositorio oficial                             |
+| `ollama stop <modelo>`   | Detiene un modelo en ejecución                                              |
+| `ollama ps`              | Lista los modelos actualmente en ejecución                                  |
+| `ollama list`            | Lista los modelos instalados localmente                                     |
+| `ollama show <modelo>`   | Muestra información del modelo (tamaño, etiquetas, etc.)                    |
+| `ollama rm <modelo>`     | Elimina un modelo del entorno local                                         |
+| `ollama cp <src> <dst>`  | Copia un modelo local con un nuevo nombre                                   |
+| `ollama create`          | Crea un modelo a partir de un archivo `Modelfile`                           |
+| `ollama push`            | Sube un modelo a un repositorio remoto (avanzado, requiere autenticación)   |
+| `ollama help`            | Muestra ayuda general o específica de un comando                            |
+| `ollama --version`       | Muestra la versión instalada de Ollama                                      |
+| `ollama --help`          | Muestra la ayuda general del CLI                                            |
+
+### Ejemplos de uso
+
+```bash
+ollama serve
+```
+
+##### ```http://localhost:11434/```
+
+### Descarga un modelo (ej. llama3)
+- $ ollama pull llama3
+
+### Ejecuta el modelo llama3 en modo chat
+- $ ollama run llama3
+
+### Detiene la ejecución de llama3
+- $ ollama stop llama3
+
+### Lista los modelos que están corriendo
+- $ ollama ps
+
+### Lista los modelos instalados localmente
+- $ ollama list
+
+### Usar la API de Ollama con curl para probar
+
+```bash
+curl http://localhost:11434/api/generate -d '{
+  "model": "llama3",
+  "prompt": "¿Qué es la inteligencia artificial?",
+  "temperature": 0.7,
+  "top_p": 0.9,
+  "repeat_penalty": 1.2,
+  "stop": ["\n"],
+  "stream": false
+}'
 ```
 
