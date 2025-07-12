@@ -54,3 +54,24 @@ Puedes utilizar n8n desde su plataforma para comenzar a explorar, tendrás 14 d�
 
 Sin embargo, unas de las ventajas de n8n es que puedes utilizarlo en un ambiente local, a continuación encontrarás una guía de hacerlo.
 
+### Instalar Docker
+
+- [Docker Desktop](https://docs.docker.com/get-started/get-docker/)
+- [Compose](https://docs.docker.com/compose/install/)
+
+#### Verificar
+
+```bash
+docker --version
+```
+
+```bash
+docker compose version
+```
+
+### Instalar ollama
+
+```bash
+$ brew install ollama
+```
+
