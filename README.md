@@ -141,3 +141,19 @@ curl http://localhost:11434/api/generate -d '{
 }'
 ```
 
+### Parámetros de `/api/generate` en Ollama
+
+| Parámetro         | Tipo       | Descripción                                                                                          | Valor típico / Ejemplo                                     |
+|-------------------|------------|------------------------------------------------------------------------------------------------------|-------------------------------------------------------------|
+| `model`           | `string`   | Nombre del modelo a usar (`llama3`, `mistral`, etc.)                                                 | `"model": "llama3"`                                        |
+| `prompt`          | `string`   | Texto de entrada para generar una respuesta.                                                         | `"prompt": "¿Qué es la inteligencia artificial?"`          |
+| `stream`          | `boolean`  | Si `true`, devuelve respuesta en tiempo real (streaming). Si `false`, espera a la respuesta completa.| `"stream": false`                                          |
+| `temperature`     | `float`    | Controla la aleatoriedad. <br>0.0 = determinista, 1.0 = más creativo.                                | `0.2`, `0.7`, `1.0`                                        |
+| `top_k`           | `int`      | Solo considera los K tokens más probables. Limita rarezas.                                           | `40`, `100`                                                |
+| `top_p`           | `float`    | Nucleus sampling: incluye tokens hasta que la suma de sus probabilidades llegue a `top_p`.          | `0.8`, `0.9`                                               |
+| `repeat_penalty`  | `float`    | Penaliza repeticiones. <br>Mayor a 1.0 reduce repeticiones.                                          | `1.1`, `1.2`                                               |
+| `stop`            | `string[]` | Lista de secuencias que detienen la generación.                                                      | `["Usuario:", "\n"]`                                       |
+| `system`          | `string`   | Mensaje que define el comportamiento del modelo.                                                     | `"Eres un asistente experto en historia de México"`       |
+| `template`        | `string`   | Nombre de plantilla definida para estructurar prompts (opcional).                                   | `"chat"`                                                   |
+| `options`         | `object`   | Opciones avanzadas específicas del modelo.                                                           | `{ "num_ctx": 4096 }` (dependiente del modelo)             |
+
