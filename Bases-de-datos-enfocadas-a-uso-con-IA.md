@@ -277,3 +277,26 @@ Libro:
 - [PequeÑa_introducción_a_las_bases_de_datos](https://www.researchgate.net/publication/369039369_Pequena_introduccion_a_las_bases_de_datos)
 
 
+## ¿Qué es una base de datos vectorial?
+
+Una base de datos vectorial es un sistema especializado diseñado para manejar eficientemente datos en forma de vectores de alta dimensión. En el contexto de IA son ideales para el manejo eficiente de recursos porque se pueden acceder fácilmente y dan información precisa acompañada de contexto.
+
+Los vectores son arreglos de números en un espacio de múltiples dimensiones, cada dimensión representa una característica del objeto que estemos representando y a esta le daremos un valor.  Cuando se asocia a temas de LLM e IA se utilizan principalmente para convertir cadenas de texto en arreglos de números a través del proceso de embedding o incrustación y después recuperarlas para interactuar con el LLM. También se pueden usar para representar imágenes, documentos y audio, es importante recordar que su uso no es exclusivo para texto.
+
+Algunas características de las bases de datos vectoriales son:
+
+- Escalable: es compatible con altos volúmenes de datos y se escalan horizontalmente sin bajar el rendimiento.
+
+- Flexible: son capaces de manejar datos no-estructurados: 
+
+- Indexable: usando algoritmos de ANN (Approximate Nearest Neighbor) puede buscar un vector similar entre un grupo de los más parecidos en lugar de uno que sea exactamente igual y ahorrar recursos (ver HNSW, LSH, PQ y IVF).
+
+Los principales desafíos a los que se enfrentan estas bases de datos son:
+
+- Altos costos computacionales: la dimensionalidad y el almacenamiento ocupan muchos recursos.
+
+- Uso de memoria: los vectores de alta dimensión ocupan mucho espacio.
+
+- Velocidad sobre precisión: al usar algoritmos ANN se sacrifica la precisión por velocidad en comparación con búsquedas exactas.
+
+Las bases de datos vectoriales son el centro de muchas aplicaciones de IA que pueden ir desde chatbots, automatizaciones, sistemas de recomendación y sobre todo el desarrollo de algunos agentes con memoria. Se espera que su uso se magnifique en aplicaciones de IA generativa y procesamiento de datos en tiempo real.
